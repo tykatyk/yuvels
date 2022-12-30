@@ -12,6 +12,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
 export default function Footer() {
+  //ToDo: stick footer to the bottom
+  //regardless of page's height
   return (
     <footer
       style={{
