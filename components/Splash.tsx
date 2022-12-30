@@ -3,8 +3,8 @@ import Container from "@mui/material/Container";
 
 export default function Splash() {
   return (
-    <Container style={{ padding: 0, maxWidth: 1920 }}>
-      <section>
+    <section>
+      <Container style={{ padding: 0, maxWidth: 1920, paddingBottom: "4rem" }}>
         <div
           style={{
             display: "flex",
@@ -35,7 +35,13 @@ export default function Splash() {
             аутсорсинг
           </Typography>
         </div>
-      </section>
-    </Container>
+        <div
+          style={{
+            height: "0.5rem",
+            background: "#92eb34",
+          }}
+        ></div>
+      </Container>
+    </section>
   );
 }

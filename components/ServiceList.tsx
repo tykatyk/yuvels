@@ -1,4 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
+import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
@@ -19,60 +20,63 @@ export default function ServiceList() {
 
   return (
     <section>
-      <Typography
-        align="center"
-        variant="h2"
-        sx={{
-          fontSize: "2.5rem",
-          margin: "4rem 0",
-          letterSpacing: "0.125rem",
-        }}
-      >
-        Що ми пропонуємо?
-      </Typography>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid xs={12} sm={6} md={4}>
-            <ServiceListCard text="Бухгалтерський супровід юридичних осіб та ФОП">
-              <SupervisedUserCircleIcon sx={iconStyles} />
-            </ServiceListCard>
-          </Grid>
-          <Grid xs={12} sm={6} md={4}>
-            <ServiceListCard text="Аудит стану обліку та фінансової звітності замовника">
-              <AppRegistrationIcon sx={iconStyles} />
-            </ServiceListCard>
-          </Grid>
-          <Grid xs={12} sm={6} md={4}>
-            <ServiceListCard
-              text="Реєстрація юридичних осіб та ФОП. Розроблення статутних
+      <Container maxWidth="lg" style={{ paddingBottom: "4rem" }}>
+        <Typography
+          align="center"
+          variant="h2"
+          sx={{
+            fontSize: "2.5rem",
+            fontWeight: "700",
+            marginBottom: "4rem",
+            letterSpacing: "0.125rem",
+          }}
+        >
+          Що ми пропонуємо?
+        </Typography>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid xs={12} sm={6} md={4}>
+              <ServiceListCard text="Бухгалтерський супровід юридичних осіб та ФОП">
+                <SupervisedUserCircleIcon sx={iconStyles} />
+              </ServiceListCard>
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+              <ServiceListCard text="Аудит стану обліку та фінансової звітності замовника">
+                <AppRegistrationIcon sx={iconStyles} />
+              </ServiceListCard>
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+              <ServiceListCard
+                text="Реєстрація юридичних осіб та ФОП. Розроблення статутних
                     документів"
-            >
-              <CheckCircleOutlineIcon sx={iconStyles} />
-            </ServiceListCard>
-          </Grid>
-          <Grid xs={12} sm={6} md={4}>
-            <ServiceListCard
-              text="Налагодження автоматизованого робочого місця бухгалтера у
+              >
+                <CheckCircleOutlineIcon sx={iconStyles} />
+              </ServiceListCard>
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+              <ServiceListCard
+                text="Налагодження автоматизованого робочого місця бухгалтера у
                 замовника. Встановлення програмного забезпечення"
-            >
-              <BuildIcon sx={iconStyles} />
-            </ServiceListCard>
-          </Grid>
-          <Grid xs={12} sm={6} md={4}>
-            <ServiceListCard
-              text="Підготовка документів для отримання дозволу на викиди
+              >
+                <BuildIcon sx={iconStyles} />
+              </ServiceListCard>
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+              <ServiceListCard
+                text="Підготовка документів для отримання дозволу на викиди
                 забруднюючих речовин"
-            >
-              <ListAltIcon sx={iconStyles} />
-            </ServiceListCard>
+              >
+                <ListAltIcon sx={iconStyles} />
+              </ServiceListCard>
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+              <ServiceListCard text="Ксерокс та друк в офісі">
+                <ScannerIcon sx={iconStyles} />
+              </ServiceListCard>
+            </Grid>
           </Grid>
-          <Grid xs={12} sm={6} md={4}>
-            <ServiceListCard text="Ксерокс та друк в офісі">
-              <ScannerIcon sx={iconStyles} />
-            </ServiceListCard>
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </Container>
     </section>
   );
 }

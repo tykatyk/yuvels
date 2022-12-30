@@ -1,10 +1,10 @@
 import Head from "next/head";
 import AppBar from "../components/AppBar";
 import Splash from "../components/Splash";
+import ContactForm from "../components/ContactUs";
 import ServiceList from "../components/ServiceList";
 import Benefits from "../components/Benefits";
 import Footer from "../components/Footer";
-import Container from "@mui/material/Container";
 
 export default function Home() {
   return (
@@ -17,17 +17,9 @@ export default function Home() {
       <main>
         <AppBar />
         <Splash />
-        <div
-          style={{
-            maxWidth: 1920,
-            height: "0.5rem",
-            background: "#92eb34",
-          }}
-        ></div>
-        <Container maxWidth="lg">
-          <ServiceList />
-          <Benefits />
-        </Container>
+        <ServiceList />
+        <Benefits />
+        <ContactForm />
         <Footer />
       </main>
     </>
