@@ -7,9 +7,6 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Logo from "./Logo";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 
 export default function Footer() {
   //ToDo: stick footer to the bottom
