@@ -1,5 +1,7 @@
 import Head from "next/head";
 import AppBar from "../components/AppBar";
+import BackToTop from "../components/BackToTop";
+import Toolbar from "@mui/material/Toolbar";
 import Footer from "../components/Footer";
 import { styled } from "@mui/material/styles";
 
@@ -26,6 +28,8 @@ export default function Layout(props: any) {
         >
           <div style={{ flex: "1 0 auto" }}>
             <AppBar />
+            <Toolbar id="scrollToTopAnchor" />
+            <BackToTop anchorEl="scrollToTopAnchor" />
             {children}
           </div>
           <StyledFooter />
