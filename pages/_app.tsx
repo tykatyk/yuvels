@@ -6,6 +6,13 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        html, body, #__next, main, {height: 100%;}
+      `,
+    },
+  },
 });
 
 export default function App({ Component, pageProps }: AppProps) {
