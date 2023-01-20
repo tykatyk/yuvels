@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import ContactForm from "./ContactForm";
+import ContactUsForm from "./ContactUsForm";
 
 export default function ContactUs() {
   return (
@@ -19,7 +19,7 @@ export default function ContactUs() {
           Залишились питання?
         </Typography>
         <Container maxWidth={"sm"}>
-          <ContactForm />
+          <ContactUsForm />
         </Container>
       </div>
     </section>
