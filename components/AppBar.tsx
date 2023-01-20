@@ -8,23 +8,20 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import TripOriginIcon from "@mui/icons-material/TripOrigin";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
+import Link from "./Link";
 
 const pages = [
-  "Бухгалтерські послуги",
-  "Реєстрація ФОП та ЮО",
-  "Дозволи на викиди",
-  "Ціни",
-  "Контакти",
+  { href: "/accounting", description: "Бухгалтерські послуги" },
+  { href: "/registration", description: "Реєстрація ФОП та ЮО" },
+  { href: "/permissions", description: "Дозволи на викиди" },
+  { href: "/prices", description: "Ціни" },
+  { href: "/contacts", description: "Контакти" },
 ];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
 
@@ -33,11 +30,12 @@ function ResponsiveAppBar() {
   };
 
   const handleCloseNavMenu = () => {
+    console.log("here");
     setAnchorElNav(null);
   };
 
   return (
-    <AppBar position="static">
+    <AppBar>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -80,8 +78,8 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.description} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.description}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -118,13 +116,34 @@ function ResponsiveAppBar() {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
+              <Box
+                component="span"
+                key={page.description}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  display: "flex",
+                  my: 2,
+                  padding: "0.375rem 0.5rem",
+                  fontSize: "0.875rem",
+                  fontWeight: 500,
+                  letterSpacing: "0.02857em",
+                  color: "white",
+                  alignItems: "center",
+                }}
               >
-                {page}
-              </Button>
+                <Link
+                  style={{
+                    textTransform: "uppercase",
+                    color: "white",
+                    textDecoration: "none",
+                    display: "block",
+                    textAlign: "center",
+                  }}
+                  href={`${page.href}`}
+                >
+                  {page.description}
+                </Link>
+              </Box>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
