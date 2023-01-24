@@ -11,7 +11,7 @@ export default function Splash() {
             flexDirection: "column",
             justifyContent: "end",
             alignItems: "center",
-            height: "600px",
+            height: "650px",
             background:
               "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/office.jpg') no-repeat center top",
             backgroundSize: "cover",
