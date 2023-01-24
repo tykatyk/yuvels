@@ -4,13 +4,16 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import { useTheme } from "@mui/material/styles";
 import Logo from "./Logo";
+import Link from "./Link";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import contacts from "../helpers/contacts";
 
 export default function Footer() {
-  //ToDo: stick footer to the bottom
-  //regardless of page's height
+  const theme = useTheme();
   return (
     <footer
       style={{
@@ -21,22 +24,41 @@ export default function Footer() {
         padding: "2rem 0",
       }}
     >
-      <Container maxWidth="sm">
-        <Grid container>
-          <Grid xs={12} sm={6}>
-            <List>
-              <ListItem>
+      <Container maxWidth="md">
+        <Grid
+          container
+          sx={{
+            [theme.breakpoints.down("md")]: {
+              "& > *": {
+                marginBottom: "1rem",
+              },
+            },
+          }}
+        >
+          <Grid xs={12} sm={3}>
+            <List dense={true}>
+              <ListItem style={{ justifyContent: "flex-start" }}>
                 <Logo />
               </ListItem>
-              <ListItem>
+              <ListItem style={{ justifyContent: "flex-start" }}>
                 <Typography variant="body2" color="text.secondary">
                   ©{new Date().getFullYear()}
                 </Typography>
               </ListItem>
             </List>
           </Grid>
-          <Grid xs={12} sm={6}>
-            <List>
+          <Grid
+            xs={12}
+            sm={7}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              [theme.breakpoints.down("md")]: {
+                justifyContent: "flex-start",
+              },
+            }}
+          >
+            <List dense={true}>
               <ListItem>
                 <Box
                   sx={{
@@ -46,8 +68,7 @@ export default function Footer() {
                   <LocationOnIcon sx={{ marginRight: "1rem" }} />
                   <div>
                     <Typography variant="body2" color="text.secondary">
-                      м. Хмільник, вул. 1-го Травня 22, 3-й поверх, скляний
-                      кабінет
+                      {contacts.address}
                     </Typography>
                   </div>
                 </Box>
@@ -57,10 +78,31 @@ export default function Footer() {
                   <LocalPhoneIcon sx={{ marginRight: "1rem" }} />
                   <div>
                     <Typography variant="body2" color="text.secondary">
-                      тел. 093 941 90 80
+                      {contacts.phone}
                     </Typography>
                   </div>
                 </Box>
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid xs={12} sm={2}>
+            <List dense={true}>
+              <ListItem
+                sx={{
+                  justifyContent: "flex-end",
+                  [theme.breakpoints.down("md")]: {
+                    justifyContent: "flex-start",
+                  },
+                }}
+              >
+                <Link
+                  href="https://www.facebook.com/profile.php?id=100089295870178"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ color: "#fff" }}
+                >
+                  <FacebookIcon style={{ fontSize: "2.5rem" }} />
+                </Link>
               </ListItem>
             </List>
           </Grid>
