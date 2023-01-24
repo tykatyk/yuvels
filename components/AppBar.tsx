@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
 import Link from "./Link";
+import contacts from "../helpers/contacts";
 
 const pages = [
   { href: "/accounting", description: "Бухгалтерські послуги" },
@@ -151,11 +152,11 @@ function ResponsiveAppBar() {
               sx={{
                 fontWeight: 700,
                 fontSize: { lg: "1.125rem" },
-                letterSpacing: { lg: "0.1rem" },
+                letterSpacing: { lg: "0.05rem" },
                 color: "#92eb34",
               }}
             >
-              +38 (093) 941 90 80
+              {contacts.phone}
             </Typography>
           </Box>
         </Toolbar>
