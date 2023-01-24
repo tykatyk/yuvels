@@ -96,17 +96,20 @@ export default function ContactForm() {
           />
         </Stack>
       </div>
-      <Button
-        fullWidth
-        style={{
-          background: "#b59c10",
-          fontWeight: 700,
-        }}
-        variant="contained"
-        type="submit"
-      >
-        Надіслати
-      </Button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          fullWidth
+          style={{
+            background: "#ceb019",
+            fontWeight: 700,
+            maxWidth: 250,
+          }}
+          variant="contained"
+          type="submit"
+        >
+          Надіслати
+        </Button>
+      </div>
     </form>
   );
 }
