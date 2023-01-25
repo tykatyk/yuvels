@@ -80,7 +80,9 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.description} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.description}</Typography>
+                  <Typography textAlign="center" component="a" href={page.href}>
+                    {page.description}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
