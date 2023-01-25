@@ -122,7 +122,7 @@ export default function Contacts() {
         >
           Напишіть нам
         </Typography>
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" id="contactUs">
           <ContactForm />
         </Container>
       </div>
