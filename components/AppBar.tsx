@@ -6,12 +6,13 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import TripOriginIcon from "@mui/icons-material/TripOrigin";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
 import Link from "./Link";
 import contacts from "../helpers/contacts";
+import { css } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 
 const pages = [
   { href: "/accounting", description: "Бухгалтерські послуги" },
@@ -22,6 +23,7 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -31,7 +33,6 @@ function ResponsiveAppBar() {
   };
 
   const handleCloseNavMenu = () => {
-    console.log("here");
     setAnchorElNav(null);
   };
 
@@ -100,7 +101,10 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               flexGrow: 1,
-              paddingRight: "2rem",
+              paddingRight: {
+                md: "1rem",
+                lg: "2rem",
+              },
               display: { xs: "none", md: "flex" },
             }}
           >
@@ -121,13 +125,16 @@ function ResponsiveAppBar() {
                 }}
               >
                 <Link
-                  style={{
+                  css={css({
                     textTransform: "uppercase",
                     color: "white",
                     textDecoration: "none",
                     display: "block",
                     textAlign: "center",
-                  }}
+                    [theme.breakpoints.down("lg")]: {
+                      fontSize: "0.75rem",
+                    },
+                  })}
                   href={`${page.href}`}
                 >
                   {page.description}
@@ -139,7 +146,7 @@ function ResponsiveAppBar() {
             <Typography
               sx={{
                 fontWeight: 700,
-                fontSize: { lg: "1.125rem" },
+                fontSize: { md: "0.875rem", lg: "1.125rem" },
                 letterSpacing: { lg: "0.05rem" },
                 color: "#92eb34",
               }}
