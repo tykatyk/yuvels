@@ -13,7 +13,7 @@ export default function Splash() {
             alignItems: "center",
             height: "650px",
             background:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/office.jpg') no-repeat center top",
+              "linear-gradient(rgba(0, 0, 0, 0.5)), url('/office.jpg') no-repeat center top",
             backgroundSize: "cover",
           }}
         >
