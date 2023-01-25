@@ -1,8 +1,11 @@
 import Typography from "@mui/material/Typography";
 import TripOriginIcon from "@mui/icons-material/TripOrigin";
 import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
 
 export default function Logo() {
+  const theme = useTheme();
+
   return (
     <Box
       component="span"
@@ -23,12 +26,15 @@ export default function Logo() {
         component="a"
         href="/"
         sx={{
-          mr: 2,
           fontFamily: "monospace",
           fontWeight: 700,
-          letterSpacing: ".3rem",
+          letterSpacing: ".2rem",
           color: "#92eb34",
           textDecoration: "none",
+          fontSize: {
+            md: "1.125rem",
+            lg: "1.25rem",
+          },
         }}
       >
         ЮВЕЛС
