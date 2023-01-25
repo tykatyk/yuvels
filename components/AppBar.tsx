@@ -87,30 +87,16 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <TripOriginIcon
+          <Box
             sx={{
               display: { xs: "flex", md: "none", color: "#92eb34" },
               mr: 1,
-            }}
-          />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "#92eb34",
-              textDecoration: "none",
             }}
           >
-            ЮВЕЛС
-          </Typography>
+            <Logo />
+          </Box>
+
           <Box
             sx={{
               flexGrow: 1,
