@@ -81,16 +81,20 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.description} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" component="a" href={page.href}>
+                  <Link
+                    sx={{ color: "#fff", textDecoration: "none" }}
+                    href={page.href}
+                  >
                     {page.description}
-                  </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Box
             sx={{
-              display: { xs: "flex", md: "none", color: "#92eb34" },
+              color: "#92eb34",
+              display: { xs: "flex", md: "none" },
               mr: 1,
               flexGrow: 1,
             }}
@@ -127,12 +131,15 @@ function ResponsiveAppBar() {
                 <Link
                   css={css({
                     textTransform: "uppercase",
-                    color: "white",
+                    color: "#fff",
                     textDecoration: "none",
                     display: "block",
                     textAlign: "center",
                     [theme.breakpoints.down("lg")]: {
                       fontSize: "0.75rem",
+                    },
+                    "&.active": {
+                      borderBottom: "2px solid #fff",
                     },
                   })}
                   href={`${page.href}`}
