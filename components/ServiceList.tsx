@@ -25,10 +25,10 @@ export default function ServiceList() {
           align="center"
           variant="h2"
           sx={{
+            fontFamily: "Russo One, sans-serif",
             fontSize: "2.5rem",
             fontWeight: "700",
             marginBottom: "4rem",
-            letterSpacing: "0.125rem",
           }}
         >
           Що ми пропонуємо?
@@ -47,7 +47,7 @@ export default function ServiceList() {
             </Grid>
             <Grid xs={12} sm={6} md={4}>
               <ServiceListCard
-                text="Реєстрація юридичних осіб та ФОП. Розроблення статутних
+                text="Реєстрація юридичних осіб та ФОП. Розробка статутних
                     документів"
               >
                 <CheckCircleOutlineIcon sx={iconStyles} />

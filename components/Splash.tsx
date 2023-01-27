@@ -21,9 +21,12 @@ export default function Splash() {
             variant="h1"
             align="center"
             sx={{
+              fontFamily: "Russo One, sans-serif",
               fontSize: {
-                xs: "4.5rem",
-                md: "5.5rem",
+                xs: "2rem",
+                sm: "3rem",
+                md: "4rem",
+                lg: "5rem",
               },
               letterSpacing: "0.1rem",
               textTransform: "uppercase",

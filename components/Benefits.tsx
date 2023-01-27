@@ -16,13 +16,13 @@ export default function SelectedListItem() {
           align="center"
           variant="h2"
           sx={{
+            fontFamily: "Russo One, sans-serif",
             fontSize: "2.5rem",
             fontWeight: "700",
             marginBottom: "2rem",
-            letterSpacing: "0.125rem",
           }}
         >
-          Чому бухгалтерський аутсорсинг це вигідно?
+          Чому це вигідно?
         </Typography>
         <Box
           sx={{
