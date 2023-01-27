@@ -1,9 +1,16 @@
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, Box } from "@mui/material";
 import Link from "./Link";
 
 export default function QuestionsRemain() {
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Typography
         component="div"
         variant="h4"
@@ -32,6 +39,6 @@ export default function QuestionsRemain() {
           Написати
         </Link>
       </Button>
-    </>
+    </Box>
   );
 }
