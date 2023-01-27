@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Table from "@mui/material/Table";
@@ -15,7 +14,7 @@ import Layout from "./Layout";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: "#8b960b",
+    backgroundColor: "#554366",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -132,7 +131,7 @@ function PricesTable(props: Rows) {
 
 export default function Prices() {
   return (
-    <Layout title="Ціни">
+    <Layout title="Вартість послуг">
       <Container maxWidth="lg" style={{ paddingBottom: "4rem" }}>
         <Typography
           align="center"
@@ -144,7 +143,7 @@ export default function Prices() {
             letterSpacing: "0.125rem",
           }}
         >
-          Тарифи на послуги
+          Вартість послуг
         </Typography>
         <Typography style={{ marginBottom: "3rem" }}>
           Ми пропонуємо два види тарифів, щоб ви могли обрати оптимальний для
