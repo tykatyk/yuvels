@@ -16,8 +16,8 @@ import { useTheme } from "@mui/material/styles";
 
 const pages = [
   { href: "/accounting", description: "Бухгалтерські послуги" },
+  { href: "/ecology", description: "Екологічні послуги" },
   { href: "/registration", description: "Реєстрація ФОП та ЮО" },
-  { href: "/permissions", description: "Дозволи на викиди" },
   { href: "/prices", description: "Ціни" },
   { href: "/contacts", description: "Контакти" },
 ];
