@@ -39,6 +39,7 @@ export default function Contacts() {
                 paddingTop: "2rem",
                 paddingBottom: "1.2rem",
                 fontFamily: "Russo One, sans-serif",
+                color: "#3a253d",
               }}
             >
               Наші контакти
@@ -87,6 +88,7 @@ export default function Contacts() {
               variant="h5"
               align="center"
               sx={{
+                color: "#3a253d",
                 fontWeight: "bold",
                 paddingBottom: "0.5rem",
                 fontFamily: "Russo One, sans-serif",
