@@ -66,21 +66,28 @@ export default function Footer() {
                   }}
                 >
                   <LocationOnIcon sx={{ marginRight: "1rem" }} />
-                  <div>
-                    <Typography variant="body2" color="text.secondary">
-                      {contacts.address}
-                    </Typography>
-                  </div>
+                  <Typography
+                    component="div"
+                    variant="body2"
+                    color="text.secondary"
+                  >
+                    {contacts.address}
+                  </Typography>
                 </Box>
               </ListItem>
               <ListItem>
                 <Box sx={{ display: "flex" }}>
                   <LocalPhoneIcon sx={{ marginRight: "1rem" }} />
-                  <div>
-                    <Typography variant="body2" color="text.secondary">
-                      {contacts.phone}
-                    </Typography>
-                  </div>
+                  <Link
+                    variant="body2"
+                    sx={{
+                      textDecoration: "none",
+                      color: theme.palette.text.secondary,
+                    }}
+                    href={`tel:${contacts.phone}`}
+                  >
+                    {contacts.phone}
+                  </Link>
                 </Box>
               </ListItem>
             </List>
