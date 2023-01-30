@@ -1,4 +1,3 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import List from "@mui/material/List";
@@ -6,33 +5,21 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import BeenhereIcon from "@mui/icons-material/Beenhere";
-import Typography from "@mui/material/Typography";
+import H2 from "./H2";
 
 export default function SelectedListItem() {
   return (
     <section>
-      <Container maxWidth="lg" style={{ paddingBottom: "2rem" }}>
-        <Typography
-          align="center"
-          variant="h2"
-          sx={{
-            fontFamily: "Russo One, sans-serif",
-            fontSize: "2.5rem",
-            fontWeight: "700",
-            marginBottom: "2rem",
-          }}
-        >
-          Чому це вигідно?
-        </Typography>
+      <H2 text="Чому це вигідно?" />
+      <Container maxWidth="lg">
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
-            width: "100%",
-            bgcolor: "background.paper",
+            paddingBottom: "2rem",
           }}
         >
-          <List aria-label="Переваги аутсорсингу">
+          <List aria-label="Переваги аутсорсингу" sx={{ p: 0 }}>
             <ListItem>
               <ListItemIcon>
                 <BeenhereIcon sx={{ color: "#bfbf24" }} />

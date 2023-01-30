@@ -9,6 +9,7 @@ import BuildIcon from "@mui/icons-material/Build";
 import ScannerIcon from "@mui/icons-material/Scanner";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import ServiceListCard from "./ServiceListCard";
+import H2 from "./H2";
 
 export default function ServiceList() {
   const iconStyles = {
@@ -20,19 +21,8 @@ export default function ServiceList() {
 
   return (
     <section>
-      <Container maxWidth="lg" style={{ paddingBottom: "4rem" }}>
-        <Typography
-          align="center"
-          variant="h2"
-          sx={{
-            fontFamily: "Russo One, sans-serif",
-            fontSize: "2.5rem",
-            fontWeight: "700",
-            marginBottom: "4rem",
-          }}
-        >
-          Що ми пропонуємо?
-        </Typography>
+      <H2 text="Що ми пропонуємо?" />
+      <Container maxWidth="lg">
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid xs={12} sm={6} md={4}>
