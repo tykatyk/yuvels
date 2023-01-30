@@ -1,7 +1,6 @@
 import { Container, Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import QuestionsRemain from "./QuestionsRemain";
-import ServicesHeader from "./ServicesHeader";
 import RegistrationServicesDescription from "./RegistrationServicesDescription";
 
 export default function RegistrationServices() {
@@ -23,7 +22,6 @@ export default function RegistrationServices() {
           alt="Вид зверху на стіл, на якому стоїть вазон, клавіатура і письмова ручка"
         />
       </Box>
-      <ServicesHeader text="Реєстрація ФОП та ЮО" />
       <RegistrationServicesDescription />
       <QuestionsRemain />
     </Container>

@@ -1,12 +1,16 @@
 import { Box, Container, Typography } from "@mui/material";
 import RegistrationRequirementsList from "./RegistrationRequirementsList";
+import ServicesHeader from "./ServicesHeader";
 
 export default function RegistrationServicesDescription() {
   return (
-    <Box sx={{ paddingBottom: "2rem" }}>
+    <section>
+      <ServicesHeader text="Реєстрація ФОП та ЮО" />
       <Container maxWidth="md">
-        <Box sx={{ paddingTop: "3rem", paddingBottom: "0.5rem" }}>
-          <Typography paragraph>Не знаєте як розпочати бізнес?</Typography>
+        <Box>
+          <Typography paragraph sx={{ fontWeight: "bold" }}>
+            Не знаєте як розпочати бізнес?
+          </Typography>
           <Typography paragraph>
             Будь який бізнес починається з реєстрації. Ми допоможемо підготувати
             та подати усі документи, які необхідні для здійснення реєстраційних
@@ -15,6 +19,6 @@ export default function RegistrationServicesDescription() {
           <RegistrationRequirementsList />
         </Box>
       </Container>
-    </Box>
+    </section>
   );
 }

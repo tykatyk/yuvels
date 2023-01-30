@@ -16,7 +16,9 @@ const StyledIcon = styled(BeenhereIcon)`
 export default function RegistrationRequirementsList() {
   return (
     <>
-      <Typography>Для реєстрації ФОП вам знадобляться:</Typography>
+      <Typography sx={{ fontWeight: "bold" }}>
+        Для реєстрації ФОП вам знадобляться:
+      </Typography>
       <List aria-label="Перелік документів, які потрібні для реєстрації ФОП">
         <ListItem>
           <ListItemIcon>
@@ -31,7 +33,7 @@ export default function RegistrationRequirementsList() {
           <ListItemText primary="2.	Копію паспорта та коду" />
         </ListItem>
       </List>
-      <Typography>
+      <Typography sx={{ fontWeight: "bold" }}>
         Що ж стосується реєстрації ТОВ, то тут вам будуть потрібні:
       </Typography>
       <List aria-label="Перелік документів, які потрібні для реєстрації ТОВ">
