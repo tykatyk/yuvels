@@ -1,5 +1,6 @@
-import { Typography, Button, Box } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import Link from "./Link";
+import H2 from "./H2";
 
 export default function QuestionsRemain() {
   return (
@@ -11,14 +12,8 @@ export default function QuestionsRemain() {
         alignItems: "center",
       }}
     >
-      <Typography
-        component="div"
-        variant="h4"
-        align="center"
-        sx={{ fontFamily: "Russo One, sans-serif", paddingBottom: "2rem" }}
-      >
-        Залишились питання?
-      </Typography>
+      <H2 text="Залишились питання?" />
+
       <Button
         fullWidth
         style={{
