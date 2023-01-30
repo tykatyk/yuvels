@@ -1,7 +1,6 @@
 import { Container, Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import QuestionsRemain from "./QuestionsRemain";
-import ServicesHeader from "./ServicesHeader";
 import EcologyServicesDescription from "./EcologyServicesDescription";
 
 export default function EcologyServices() {
@@ -23,7 +22,6 @@ export default function EcologyServices() {
           alt="Труби промислових підприємств з яких іде дим на фоні неба"
         />
       </Box>
-      <ServicesHeader text="Екологічні послуги" />
       <EcologyServicesDescription />
       <QuestionsRemain />
     </Container>
