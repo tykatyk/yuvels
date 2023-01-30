@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
@@ -27,12 +28,21 @@ const validationSchema = yup.object({
     .required("Дане поле обов'язкове"),
   message: yup
     .string()
-    .min(8, "Мінімум 20 символів")
+    .min(15, "Мінімум 15 символів")
     .max(1000, "Максимум 1000 символів")
     .required("Дане поле обов'язкове"),
 });
 
 export default function ContactForm() {
+  const [shouldShowBackendErrors, setShouldShowBackendErrors] = useState({
+    name: true,
+    email: true,
+    phone: true,
+    message: true,
+  });
+  const [showLoadingSpinner, setShowLoadingSpinner] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -55,7 +65,7 @@ export default function ContactForm() {
           <TextField
             id="name"
             name="name"
-            label="Ваше ім'я"
+            label="Ваше ім'я*"
             variant="standard"
             value={formik.values.name}
             onChange={formik.handleChange}
@@ -64,7 +74,7 @@ export default function ContactForm() {
           />
           <TextField
             id="phone"
-            label="Номер телeфону"
+            label="Номер телeфону*"
             variant="standard"
             placeholder="0XX-XXX-XX-XX"
             value={formik.values.phone}
@@ -75,7 +85,7 @@ export default function ContactForm() {
           <TextField
             id="email"
             name="email"
-            label="Email"
+            label="Email*"
             variant="standard"
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -85,7 +95,7 @@ export default function ContactForm() {
           <TextField
             id="message"
             name="message"
-            label="Повідомлення"
+            label="Повідомлення*"
             variant="standard"
             multiline
             maxRows={4}
