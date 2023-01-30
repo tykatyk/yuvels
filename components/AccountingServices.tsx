@@ -23,20 +23,19 @@ export default function AccountingServices() {
           alt="Дівчина дивиться на полицю з бухгалтерськими папками"
         />
       </Box>
-      <ServicesHeader text="Бухгалтерські послуги" />
-      <Box sx={{ paddingBottom: "2rem" }}>
+
+      <section>
+        <ServicesHeader text="Бухгалтерські послуги" />
         <Container maxWidth="md">
-          <Box sx={{ paddingTop: "3rem", paddingBottom: "0.5rem" }}>
-            <Typography paragraph>
-              Ми надаємо повних спектр бухгалтерських послуг для ФОП та
-              юридичних осіб усіх організаційно-правових форм. Якщо вам потрібен
-              надійний партнер для ведення бухгалтерії, тоді вам до нас. Ось
-              дещо з того, що ми можемо вам запропонувати:
-            </Typography>
-          </Box>
+          <Typography paragraph>
+            Ми надаємо повних спектр бухгалтерських послуг для ФОП та юридичних
+            осіб усіх організаційно-правових форм. Якщо вам потрібен надійний
+            партнер для ведення бухгалтерії, тоді вам до нас. Ось дещо з того,
+            що ми можемо вам запропонувати:
+          </Typography>
           <AccountingServicesList />
         </Container>
-      </Box>
+      </section>
       <QuestionsRemain />
     </Container>
   );
