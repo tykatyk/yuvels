@@ -1,17 +1,27 @@
-import Typography from "@mui/material/Typography";
 import TripOriginIcon from "@mui/icons-material/TripOrigin";
-import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
+import Link from "./Link";
 
 export default function Logo() {
   const theme = useTheme();
 
   return (
-    <Box
-      component="span"
+    <Link
+      variant="h6"
+      noWrap
+      href="/"
       sx={{
         display: "flex",
         alignItems: "center",
+        fontFamily: "monospace",
+        fontWeight: 700,
+        letterSpacing: ".2rem",
+        color: "#92eb34",
+        textDecoration: "none",
+        fontSize: {
+          md: "1.125rem",
+          lg: "1.25rem",
+        },
       }}
     >
       <TripOriginIcon
@@ -20,25 +30,7 @@ export default function Logo() {
           mr: 1,
         }}
       />
-      <Typography
-        variant="h6"
-        noWrap
-        component="a"
-        href="/"
-        sx={{
-          fontFamily: "monospace",
-          fontWeight: 700,
-          letterSpacing: ".2rem",
-          color: "#92eb34",
-          textDecoration: "none",
-          fontSize: {
-            md: "1.125rem",
-            lg: "1.25rem",
-          },
-        }}
-      >
-        ЮВЕЛС
-      </Typography>
-    </Box>
+      <span>ЮВЕЛС</span>
+    </Link>
   );
 }
